@@ -8,19 +8,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "react": "latest",
-    "@mui/material": "latest",
-    "@mui/icons-material": "latest",
-    "@mui/utils": "latest",
-    "react-dom": "latest",
     "@emotion/react": "latest",
     "@emotion/styled": "latest",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@mui/utils": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "^7.9.3",
     "typescript": "latest"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
     "@types/react": "latest",
-    "@types/react-dom": "latest"
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest"
   }
 }
