@@ -9,6 +9,7 @@ import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
 import visuallyHidden from '@mui/utils/visuallyHidden';
 import { styled } from '@mui/material/styles';
+import SearchBar from './SearchBar';
 
 const StyledBox = styled('div')(({ theme }) => ({
   alignSelf: 'center',
@@ -69,12 +70,12 @@ export default function Hero() {
             variant="h1"
             sx={{
               display: 'flex',
-              flexDirection: { xs: 'column', sm: 'row' },
+              flexDirection: { xs: 'column', sm: 'column' },
               alignItems: 'center',
               fontSize: 'clamp(3rem, 10vw, 3.5rem)',
             }}
           >
-            Our&nbsp;latest&nbsp;
+            Fast-Track&nbsp;Your&nbsp;Workflow 
             <Typography
               component="span"
               variant="h1"
@@ -86,19 +87,18 @@ export default function Hero() {
                 }),
               })}
             >
-              products
+              with Figma Designs
             </Typography>
           </Typography>
           <Typography
+          variant="h6"
             sx={{
               textAlign: 'center',
               color: 'text.secondary',
               width: { sm: '100%', md: '80%' },
             }}
           >
-            Explore our cutting-edge dashboard, delivering high-quality solutions
-            tailored to your needs. Elevate your experience with top-tier features
-            and services.
+            Speed up your design process with Figma’s ready-to-use templates, real-time collaboration, and seamless handoff features, helping teams deliver quality projects faster and more efficiently
           </Typography>
           <Stack
             direction={{ xs: 'column', sm: 'row' }}
@@ -106,46 +106,19 @@ export default function Hero() {
             useFlexGap
             sx={{ pt: 2, width: { xs: '100%', sm: '350px' } }}
           >
-            <InputLabel htmlFor="email-hero" sx={visuallyHidden}>
-              Email
-            </InputLabel>
-            <TextField
-              id="email-hero"
-              hiddenLabel
-              size="small"
-              variant="outlined"
-              aria-label="Enter your email address"
-              placeholder="Your email address"
-              fullWidth
-              slotProps={{
-                htmlInput: {
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
-                },
-              }}
-            />
-            <Button
+          <Button
               variant="contained"
               color="primary"
               size="small"
               sx={{ minWidth: 'fit-content' }}
             >
               Start now
-            </Button>
+            </Button> 
+
+            <SearchBar/>
           </Stack>
-          <Typography
-            variant="caption"
-            color="text.secondary"
-            sx={{ textAlign: 'center' }}
-          >
-            By clicking &quot;Start now&quot; you agree to our&nbsp;
-            <Link href="#" color="primary">
-              Terms & Conditions
-            </Link>
-            .
-          </Typography>
         </Stack>
-        <StyledBox id="image" />
+        {/* <StyledBox id="image" /> */}
       </Container>
     </Box>
   );

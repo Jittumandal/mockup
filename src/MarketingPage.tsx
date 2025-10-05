@@ -1,4 +1,3 @@
-import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Divider from '@mui/material/Divider';
 import AppTheme from './theme/AppTheme';
@@ -11,6 +10,7 @@ import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import LatestComponents from './components/LatestComponents';
 
 export default function MarketingPage(props: { disableCustomTheme?: boolean }) {
   return (
@@ -20,6 +20,7 @@ export default function MarketingPage(props: { disableCustomTheme?: boolean }) {
       <AppAppBar />
       <Hero />
       <div>
+        <LatestComponents/>
         <LogoCollection />
         <Features />
         <Divider />
