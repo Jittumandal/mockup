@@ -33,7 +33,7 @@ export default function Blog() {
         }}
       >
         <Typography variant="h5" align="center">
-     Blog
+     
         </Typography>
         <TextField
           label="Name"
