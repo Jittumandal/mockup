@@ -1,68 +1,28 @@
-import React, { useState } from "react";
-import { TextField, Button, Box, Typography, Container } from "@mui/material";
 
-export default function Blog() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+import CssBaseline from '@mui/material/CssBaseline';
+import Container from '@mui/material/Container';
+import MainContent from '../components/MainContent';
+import Latest from '../components/Latest';
+import AppTheme from '../theme/AppTheme';
+import AppAppBar from '../components/AppAppBar';
+import Footer from '../components/Footer';
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setForm({ ...form, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Name: ${form.name}\nEmail: ${form.email}\nMessage: ${form.message}`);
-    setForm({ name: "", email: "", message: "" });
-  };
-
+export default function Blog(props: { disableCustomTheme?: boolean }) {
   return (
-    <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
-      <Box
-        component="form"
-        onSubmit={handleSubmit}
-        sx={{
-          maxWidth: 400,
-          mx: "auto",
-          mt: 4,
-          display: "flex",
-          flexDirection: "column",
-          gap: 2,
-        }}
+    <AppTheme {...props}>
+      <CssBaseline enableColorScheme />
+
+      <AppAppBar />
+      <Container
+        maxWidth="lg"
+        component="main"
+        sx={{ display: 'flex', flexDirection: 'column', my: 16, gap: 4 }}
       >
-        <Typography variant="h5" align="center">
-     
-        </Typography>
-        <TextField
-          label="Name"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          required
-        />
-        <TextField
-          label="Email"
-          name="email"
-          type="email"
-          value={form.email}
-          onChange={handleChange}
-          required
-        />
-        <TextField
-          label="Message"
-          name="message"
-          value={form.message}
-          onChange={handleChange}
-          multiline
-          rows={4}
-          required
-        />
-        <Button type="submit" variant="contained" color="primary">
-          Send
-        </Button>
-      </Box>
-    </Container>
+        <MainContent />
+        <Latest />
+      </Container>
+      <Footer />
+    </AppTheme>
   );
 }
