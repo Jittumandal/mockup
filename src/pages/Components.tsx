@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { TextField, Button, Box, Typography, Container } from "@mui/material";
 
-export default function Contact() {
+export default function Components() {
   const [form, setForm] = useState({
     name: "",
     email: "",

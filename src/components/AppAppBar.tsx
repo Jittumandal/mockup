@@ -20,9 +20,9 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   alignItems: "center",
   justifyContent: "space-between",
   flexShrink: 0,
-  borderRadius: `calc(${theme.shape.borderRadius}px + 8px)`,
+  borderRadius: `calc(${theme.shape.borderRadius}px + 0px)`,
   backdropFilter: "blur(24px)",
-  border: "1px solid",
+  borderBottom: "1px solid",
   borderColor: (theme.vars || theme).palette.divider,
   backgroundColor: theme.vars
     ? `rgba(${theme.vars.palette.background.defaultChannel} / 0.4)`
@@ -45,11 +45,10 @@ export default function AppAppBar() {
       sx={{
         boxShadow: 0,
         bgcolor: "transparent",
-        backgroundImage: "none",
-        mt: "calc(var(--template-frame-height, 0px) + 28px)",
+        backgroundImage: "none",        
       }}
     >
-      <Container maxWidth="lg">
+      <Container maxWidth={false} disableGutters>
         <StyledToolbar variant="dense" disableGutters>
           <Box
             sx={{ flexGrow: 1, display: "flex", alignItems: "center", px: 0 }}
@@ -59,26 +58,74 @@ export default function AppAppBar() {
             </Link>
 
             <Box sx={{ display: { xs: "none", md: "flex" } }}>
-              <Link to="/about">
+              <Link to="/BrowseAll">
                 <Button
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0 }}
+                                    
+                  sx={{ minWidth: 0, textTransform:"uppercase" }}
                 >
-                  About
+                  Browse All
                 </Button>
               </Link>
-              <Link to="/contact">
+              
+              <Link to="/Components">
                 <Button
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0 }}
+                  sx={{ minWidth: 0, textTransform:"uppercase" }}
                 >
-                  Contact
+                  Components
                 </Button>
               </Link>
+
+               <Link to="/UiKits">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                >
+                 Ui Kits
+                </Button>
+              </Link>
+
+               <Link to="/Templates">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                >
+                Templates
+                </Button>
+              </Link>
+
+                 <Link to="/Pricing">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                >
+                Pricing
+                </Button>
+              </Link>
+
+                 <Link to="/Blog">
+                <Button
+                  variant="text"
+                  color="info"
+                  size="small"
+                  sx={{ minWidth: 0,textTransform:"uppercase" }}
+                >
+                Blog
+                </Button>
+              </Link>
+
+
             </Box>
           </Box>
 
