@@ -12,8 +12,7 @@ export default function App(props: { disableCustomTheme?: boolean }) {
       <CssBaseline enableColorScheme />
       <Router>
         <AppAppBar />
-        <AppRoutes />
-        <Footer />
+        <AppRoutes />        
       </Router>
     </AppTheme>
   );

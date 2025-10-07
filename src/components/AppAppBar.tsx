@@ -64,7 +64,7 @@ export default function AppAppBar() {
                   color="info"
                   size="small"
                                     
-                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                  sx={{ minWidth: 0, color: '#ff5722' }}
                 >
                   Browse All
                 </Button>
@@ -75,7 +75,7 @@ export default function AppAppBar() {
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                  sx={{ minWidth: 0,}}
                 >
                   Components
                 </Button>
@@ -86,7 +86,7 @@ export default function AppAppBar() {
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                  sx={{ minWidth: 0,}}
                 >
                  Ui Kits
                 </Button>
@@ -97,7 +97,7 @@ export default function AppAppBar() {
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                  sx={{ minWidth: 0,}}
                 >
                 Templates
                 </Button>
@@ -108,7 +108,7 @@ export default function AppAppBar() {
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0, textTransform:"uppercase" }}
+                  sx={{ minWidth: 0,}}
                 >
                 Pricing
                 </Button>
