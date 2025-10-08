@@ -7,6 +7,9 @@ import Features from "../components/Features";
 import Testimonials from "../components/Testimonials";
 import FAQ from "../components/FAQ";
 import Footer from "../components/Footer";
+import SignIn from "../components/Authentication/SignIn";
+import SignUp from "../components/Authentication/SignUp";
+import UserAccountSettings from "../components/Authentication/AccountSettings";
 
 export default function Home() {
   return (
@@ -25,6 +28,9 @@ export default function Home() {
         <FAQ />
         <Divider />
         <Footer />
+        <SignIn/>
+        <SignUp/>
+        <UserAccountSettings/>
       </div>
     </>
   );
