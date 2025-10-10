@@ -1,0 +1,78 @@
+import { styled, keyframes } from '@mui/system';
+
+// Keyframes for the scroll animation
+const scroll = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 7));
+  }
+`;
+
+// Styled SVG container similar to .TextAnimation
+export const SvgContainer = styled('svg')({
+  opacity: 1,
+  position: 'absolute',
+  left: 0,
+  bottom: 0,
+  width: '100%',
+  height: 200,
+});
+
+// Styled text with the specified stroke, font and animation
+export const AnimatedText = styled('text')({
+  fill: 'none',
+  fontSize: 100,
+  fontWeight: 800,
+  strokeDasharray: 4,
+  textTransform: 'uppercase',
+  stroke: 'rgba(145, 158, 171, 0.32)',
+  strokeWidth: 'rgba(145, 158, 171, 0.24)',
+  fontFamily: `Barlow, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  animation: `${scroll} 40s linear infinite`,
+});
+
+// Styled div similar to .mu-position
+export const MuPosition = styled('div')({
+  width: 12,
+  height: 12,
+  top: '50%',
+  left: '50%',
+  position: 'absolute',
+  transform: 'translate(calc(50% + 136px), calc(50% + 332px))',
+});
+
+
+// const scrollRight = keyframes`
+//     0% { transform: translateX(0); }
+// 	100% { transform: translateX(calc(-250px * 7))}
+// `;
+
+// const SvgContainer = styled('svg')({
+//     opacity: 1,    
+//     left: 0,
+//     width: 100,
+//     bottom: 0,
+//     height: 200, 
+
+// });
+// const AnimatedText = styled('text')({
+//   fill: '#1976d2',
+//   fontSize: 48,
+//   fontWeight: 'bold',
+//   whiteSpace: 'nowrap',
+//   animation: `${scrollRight} 40s linear infinite`,
+//   userSelect: 'none',
+// });
+
+export default function ScrollText() {
+  return (
+    <SvgContainer viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" sx={{position:''}}>
+      <AnimatedText x="0" y="70">
+        Scroll this text from left to right continuously
+      </AnimatedText>
+    </SvgContainer>
+  );
+}

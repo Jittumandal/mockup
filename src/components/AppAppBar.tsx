@@ -64,7 +64,7 @@ export default function AppAppBar() {
                   color="info"
                   size="small"
                                     
-                  sx={{ minWidth: 0, color: '#ff5722' }}
+                  sx={{ minWidth: 0, }}
                 >
                   Browse All
                 </Button>
@@ -119,7 +119,7 @@ export default function AppAppBar() {
                   variant="text"
                   color="info"
                   size="small"
-                  sx={{ minWidth: 0,textTransform:"uppercase" }}
+                  sx={{ minWidth: 0}}
                 >
                 Blog
                 </Button>
@@ -170,12 +170,12 @@ export default function AppAppBar() {
                     <CloseRoundedIcon />
                   </IconButton>
                 </Box>
-                <MenuItem>Features</MenuItem>
-                <MenuItem>Testimonials</MenuItem>
-                <MenuItem>Highlights</MenuItem>
-                <MenuItem>Pricing</MenuItem>
-                <MenuItem>FAQ</MenuItem>
-                <MenuItem>Blog</MenuItem>
+                 <Link to="/BrowseAll"><MenuItem>Browse All</MenuItem></Link>
+                <Link to="/Components"><MenuItem>Components</MenuItem></Link>
+                <Link to="/UiKits"><MenuItem>Ui Kits</MenuItem></Link>
+                <Link to="/Templates"><MenuItem>Templates</MenuItem></Link>
+                <Link to="/Pricing"><MenuItem>Pricing</MenuItem></Link>
+                <Link to="/Blog"><MenuItem>Blog</MenuItem></Link>
 
                 <Divider sx={{ my: 3 }} />
                 <MenuItem>

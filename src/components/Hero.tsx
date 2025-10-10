@@ -4,6 +4,12 @@ import Container from '@mui/material/Container';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import SearchBar from './SearchBar';
+import { FigmaIcon } from './Icons/CustomIcons';
+import HeroButtons from './Icons/HeroButtons';
+import { red } from '../theme/themePrimitives';
+import ScrollText from './TextAnimation';
+
+// import GridIcon from '../components/Images/grid.svg';
 
 
 export default function Hero() {
@@ -13,20 +19,39 @@ export default function Hero() {
       sx={(theme) => ({
         width: "100%",
         backgroundRepeat: "no-repeat",
-
+        '&::before': {
+          content: '""',
+          position: 'absolute',
+          width: '100%',
+          height: '100%',
+          top: 0,
+          left: 0,
+          backgroundImage: 'url(https://files.artadjust.com/assets/background-1.svg)',
+          ...theme.applyStyles("dark", {
+          backgroundImage:'url(https://files.artadjust.com/assets/background-1.svg)',
+        }),
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center top",
+          backgroundSize:1024,
+          opacity: 0.3,
+          zIndex:1,          
+        },
+        
         backgroundImage:
           "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 90%), transparent)",
         ...theme.applyStyles("dark", {
           backgroundImage:
             "radial-gradient(ellipse 80% 50% at 50% -20%, hsl(210, 100%, 16%), transparent)",
         }),
-      })}
+      })}  
     >
       <Container
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          position:"relative",
+          zIndex:2,
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 },
         }}
@@ -42,10 +67,10 @@ export default function Hero() {
               display: 'flex',
               flexDirection: { xs: 'column', sm: 'column' },
               alignItems: 'center',
-              fontSize: 'clamp(3rem, 10vw, 3.5rem)',
+              fontSize: 'clamp(4rem, 10vw, 4.5rem)',
             }}
-          >
-            Fast-Track&nbsp;Your&nbsp;Workflow 
+          >            
+            Make&nbsp;workflow&nbsp;simple&nbsp;with 
             <Typography
               component="span"
               variant="h1"
@@ -57,39 +82,25 @@ export default function Hero() {
                 }),
               })}
             >
-              with Figma Designs
+              pre-built components
             </Typography>
           </Typography>
           <Typography
-          variant="h6"
+          variant="h5"          
             sx={{
               textAlign: "center",
               color: "text.secondary",
+              lineHeight: 1.5,
               width: { sm: "100%", md: "80%" },
             }}
           >
-            Speed up your design process with Figma’s ready-to-use templates, real-time collaboration, and seamless handoff features, helping teams deliver quality projects faster and more efficiently
+           Speed up your design with ready-to-use components for Figma, Adobe XD, and Illustrator—just copy and paste, it’s that simple!
           </Typography>
-          <Stack
-            direction={{ xs: "column", sm: "row" }}
-            spacing={1}
-            useFlexGap
-            sx={{ pt: 2, width: { xs: "100%", sm: "350px" } }}
-          >
-          <Button
-              variant="contained"
-              color="primary"
-              size="small"
-              sx={{ minWidth: "fit-content" }}
-            >
-              Start now
-            </Button> 
-
-            <SearchBar/>
-          </Stack>
+          <HeroButtons/> 
         </Stack>
-        {/* <StyledBox id="image" /> */}
+       
       </Container>
+       <ScrollText/>
     </Box>
   );
 }
