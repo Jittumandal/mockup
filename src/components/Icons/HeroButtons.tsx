@@ -1,20 +1,21 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import { AdobeIllustratorIcon, AdobeXdIcon, FigmaIcon } from './CustomIcons';
+import { Link } from 'react-router-dom';
 
 export default function ButtonSizes() {
   return (
     <Box sx={{ '& button': { m: 1, mt:3 } }}>      
       <div>              
-        <Button variant="contained" size="large" sx={{px:1, py:1}} >
+       <Link to="/BrowseAll"> <Button variant="contained" size="large" sx={{px:1, py:1}} >
           <FigmaIcon/>
-        </Button>
-        <Button variant="contained" size="large" sx={{px:1, py:1}} >
+        </Button></Link>
+         <Link to="/BrowseAll"> <Button variant="contained" size="large" sx={{px:1, py:1}} >
           <AdobeXdIcon/>
-        </Button>
-        <Button variant="contained" size="large" sx={{px:1, py:1}} >
+        </Button></Link>
+        <Link to="/BrowseAll">  <Button variant="contained" size="large" sx={{px:1, py:1}} >
           <AdobeIllustratorIcon/>
-        </Button>
+        </Button></Link>
          
       </div>
     </Box>
