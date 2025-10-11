@@ -18,6 +18,7 @@ export default function Hero() {
       id="hero"
       sx={(theme) => ({
         width: "100%",
+        height:'100vh',
         backgroundRepeat: "no-repeat",
         '&::before': {
           content: '""',
@@ -50,7 +51,9 @@ export default function Hero() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          justifyContent:'center',
           position:"relative",
+          height:'100%',
           zIndex:2,
           pt: { xs: 14, sm: 20 },
           pb: { xs: 8, sm: 12 },
@@ -59,7 +62,7 @@ export default function Hero() {
         <Stack
           spacing={2}
           useFlexGap
-          sx={{ alignItems: "center", width: { xs: "100%", sm: "70%" } }}
+          sx={{ alignItems: "center", width: { xs: "100%", sm: "80%" } }}
         >
           <Typography
             variant="h1"
@@ -67,10 +70,11 @@ export default function Hero() {
               display: 'flex',
               flexDirection: { xs: 'column', sm: 'column' },
               alignItems: 'center',
-              fontSize: 'clamp(4rem, 10vw, 4.5rem)',
+              fontSize: '4.5rem',
+              sm:'3.5rem',
             }}
           >            
-            Make&nbsp;workflow&nbsp;simple&nbsp;with 
+            Make workflow simple with
             <Typography
               component="span"
               variant="h1"

@@ -1,4 +1,5 @@
 import { styled, keyframes } from '@mui/system';
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"></link>
 
 // Keyframes for the scroll animation
 const scroll = keyframes`
@@ -25,7 +26,7 @@ export const AnimatedText = styled('text')({
   fill: 'none',
   fontSize: 100,
   fontWeight: 800,
-  strokeDasharray: 4,
+  strokeDasharray: 2,
   textTransform: 'uppercase',
   stroke: 'rgba(145, 158, 171, 0.25)',
   strokeWidth: 'rgba(145, 158, 171, 0.03)',
@@ -47,8 +48,8 @@ export const MuPosition = styled('div')({
 export default function ScrollText() {
   return (
     <SvgContainer viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg" sx={{position:''}}>
-      <AnimatedText x="2" y="110">
-        Design Faster: Just Copy, Paste & Go!
+      <AnimatedText x="0" y="95">
+       Boost Your Workflow with Readymade Components
       </AnimatedText>
     </SvgContainer>
   );
